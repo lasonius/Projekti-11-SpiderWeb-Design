@@ -7,7 +7,8 @@
 }
 
 body{
-    min-height: 100vh;
+    max-height: 100vh;
+    width: 100%;
     background-image: url('Photo/landing.jpg'); 
     background-repeat: no-repeat;
     background-position: center;
@@ -84,7 +85,7 @@ body{
     display: none;
 }
 
-/*Breakpoints for responsive*/ 
+/*Breakpoints for responsive navbar*/ 
 @media (max-width: 992px) {
     .header{
         padding: 1.3rem 5%;
@@ -143,6 +144,7 @@ body{
     }
 }
 
+/* ENDING OF RESPONSIVE COMMANDS */
 
 .fadein {
     opacity: 0; /* Alussa teksti on nyt piilossa tämän avulla */ 
@@ -162,7 +164,7 @@ body{
 .pricing-table{
     display: flex;
     flex-wrap: wrap;
-    margin-top: 20%;
+    margin-top: 10%;
     justify-content: space-around;
     width: min(1920px,100%);
 }
@@ -172,12 +174,13 @@ body{
     max-width: 360px;
     background-color: #17171a;
     margin: 20px 10px;
-    text-align: center;
+    text-align: center; 
     cursor: pointer;
     overflow: hidden;
     color: #ffffff;
     transition: .3s linear;
     border-radius: 20px;
+    margin-bottom: 70px;
     /* border: 0.5px solid #fff; */
      
 }
@@ -242,7 +245,8 @@ body{
 }
 
 
- 
+ /* Responsive command for pricing cards */ 
+
 @media screen and (max-width:1100px)
 {
     .pricing-card{
@@ -250,3 +254,92 @@ body{
     }
 }
 
+.section2 {
+    width: 100%;
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#12151c
+}
+
+.section2-wrapper {
+    color: #fff;
+
+
+ 
+}
+
+.section2-wrapper h1 {
+    font-size: 3rem; 
+    
+}
+
+.section2-wrapper p {
+    margin-top: 10px;
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+  
+}
+
+
+
+
+
+
+
+.section3 {
+    width: 100%;
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:rgb(80, 75, 75); 
+
+}
+
+.section3-wrapper {
+    color: #fff;
+
+}
+
+.section3-wrapper h1 {
+    font-size: 3rem; 
+    color: #fff;
+  
+    
+}
+
+.section3-wrapper p {
+    margin-top: 10px;
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+}
+
+
+.section4 {
+    width: 100%;
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     background-color:#12151c
+}
+
+.section4-wrapper {
+    color: #fff;
+    margin-top: 50px;
+ 
+}
+
+.section4-wrapper h1 {
+    font-size: 3rem; 
+
+}
+
+.section4-wrapper p {
+    margin-top: 10px;
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+
+}
