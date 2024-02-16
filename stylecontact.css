@@ -6,9 +6,8 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.section{
+body{
     min-height: 100vh;
-    width: 100%;
     background-image: url('Photo/landing.jpg'); 
     background-repeat: no-repeat;
     background-position: center;
@@ -131,12 +130,6 @@
         opacity: 1;
         transition-delay: calc(.15s * var(--i));
     }
-
-    .headtopic {
-        text-align: center;
-        justify-content: center;
-
-    }
 }
 
 
@@ -169,165 +162,28 @@
     }
 }
 
- .section2 {
-    width: 100%;
-    height:100vh;
-    display: flex;
-
-    align-items: center;
-    background-color:black; 
-}
-
-.section-wrapper {
-    text-align: left;
-    margin-left: 80px;
-}
-
-
-h1 {
-    color: white;
-    font-size: 3rem;
-    font-weight: 600;
-    margin-bottom: 30px;
-    margin-top: 10px;
-}
-
-p{
-    color:white
-} 
-
-.producstbutton {
-    padding:10px;
-    border:none;
-    background-color:#ffffff;
-    color:#080808;
-    font-weight:600;
-    border-radius:5px;
-    width:25%;
-    margin-top: 5px;
-    text-decoration: none;
-
-}
-
-.producstbutton a {
-    text-decoration: none;
-        color: #090909;
-}
-
-.producstbutton:hover {
-    color: #ffffff;
-    background-color: #c1c1ca;
-}
-
-
-.footer{
-    width: 100%;
-    height: 400px;
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    
-}
-
-.footer h1 {
-    margin-top: 20px;
-    color: black;
-    text-align: left;
-    margin-left: 50px;
-}
-
-.footer h2 {
-    margin-left: 450px;
-    margin-top:30px;
-    
-}
-
-.footer-wrapper p {
-    color:rgb(93, 92, 92);
-    margin-left: 450px;
-}
-
 .form {
-    margin-top: 120px;
-    position: absolute;
-    margin-left: 50px;
-}
-
- input[type=text]{
-    border-radius: 5px;
-    padding: 10px;
-    box-shadow: 0 0 2px 0.5px;
-    border: 0;
-}
-
-
-.firstname {
-    margin: 0px 10px 0 0;
-
-}
-
-.freetext {
-    border-radius: 10px;
-    margin-top: 10px;
-    padding: 10px;
-    resize: none;
-    height: 150px;
-    width: 350px;
-    text-align:top; 
-    justify-content:top;
-
-}
-
-.button {
-   padding:10px;
-  border:none;
-  background-color:#101011;
-  color:#fff;
-  font-weight:600;
-  border-radius:5px;
-  width:25%;
-} 
-
-.button:hover {
-    background-color:#c1c1ca;
-    color: #090909;
-}
-
-
-input[type=text]:focus {
-    border-color: #0a0a0a;
-
-}
-
-.footer2 {
-    width: 100%;
-    height: 200px;
-    background-color: rgb(27, 25, 25);
-}
-
-.logo2 {
-    text-decoration: none;
-    color:#c1c1ca;
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-left: 20px;
-    text-align: left;
-}
-
-.rightsclaim {
-    color:rgb(113, 105, 105) ;
-    text-align:center;
-    margin-top: 70px;
-}
-
-.footer-wrapper2 {
     text-align: center;
-}
-
-.footer-wrapper2 a {
-    text-decoration: none;
-    color: #c1c1ca;
-    display: block;
-    position: relative;
-    top: 20px;
+    align-items: center;
+    margin-top: 25%;
+    color: white;
 
 }
+
+.black-overlay {
+    background-color: black; /* Musta overlay */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5; /* Opacity-arvo, voit säätää tarpeesi mukaan */
+    z-index: -1; /* Asetetaan päällekkäin muiden elementtien kanssa */
+}
+
+
+
+
+
+
+
