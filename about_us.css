@@ -1,0 +1,340 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body{
+    max-height: 100vh;
+    width: 100%;
+    background-image: url('Photo/landing.jpg'); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.black-overlay {
+    background-color: black; /* Musta overlay */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5; /* Opacity-arvo, voit säätää tarpeesi mukaan */
+    z-index: -1; /* Asetetaan päällekkäin muiden elementtien kanssa */
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.3rem 10%;
+   /* background: black;*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black; 
+    z-index: -1;
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+
+.navbar a {
+    font-size: 1.15rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 2.5rem;
+    
+}
+
+.navbar a:hover {
+    color: rgb(112, 109, 109);
+}
+
+#check {
+    display: none;
+}
+
+.icons {
+    position: absolute;
+    right: 5%;
+    font-size: 2.8rem;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+/*Breakpoints for responsive navbar*/ 
+@media (max-width: 992px) {
+    .header{
+        padding: 1.3rem 5%;
+    }
+}
+
+@media (max-width: 768px) {
+    .icons{
+        display: inline-flex;
+    }
+
+    #check:checked~.icons #menu-icon {
+        display: none;
+    }
+
+    .icons #close-icon {
+        display: none;
+    }
+
+    #check:checked~.icons #close-icon {
+        display:block ;
+    }
+
+    .navbar {
+        position:absolute ;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background-color: rgba(0, 0, 0, .5);
+        backdrop-filter: blur(10px);
+        box-shadow: 0. 5rem 1rem rgba(0, 0, 0, .5);
+        overflow: hidden;
+        transition: .3s ease;
+
+    }
+
+    #check:checked~.navbar {
+        height: 17.7rem;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 1.1rem;
+        margin: 1.5rem 0;
+        text-align: center;
+        transform: translateY(-50px);
+        opacity: 0;
+        transition: .3s ease;
+    }
+
+    #check:checked~.navbar a {
+        transform: translateY(0);
+        opacity: 1;
+        transition-delay: calc(.15s * var(--i));
+    }
+}
+
+/* ENDING OF RESPONSIVE COMMANDS */
+
+.fadein {
+    opacity: 0; /* Alussa teksti on nyt piilossa tämän avulla */ 
+    animation: fadein 3s ease forwards; /* Tämä käynnistää animaation, jotta teksti tulee siin*/
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0; /*Eli mistä arvosta animaatio alkaa*/
+    }
+    to {
+        opacity: 1; /* Mihin arvoon loppuu*/
+    }
+}
+
+ 
+.personnel{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10%;
+    justify-content: space-around;
+    width: min(1920px,100%);
+}
+ 
+.personnel{
+    flex: 1;
+    max-width: 360px;
+    background-color: #17171a;
+    margin: 20px 10px;
+    text-align: center; 
+    cursor: pointer;
+    overflow: hidden;
+    color: #ffffff;
+    transition: .3s linear;
+    border-radius: 20px;
+    margin-bottom: 70px;
+    /* border: 0.5px solid #fff; */
+     
+}
+ 
+.personnel-header{
+    background-color: #0c0a0a;
+    display: inline-block;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 0 0 20px 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: .4s linear;
+}
+ 
+.personnel:hover .personnel-header {
+    box-shadow: 0 0 0 26em #333333;
+}
+ 
+.price{
+    font-size: 30px;
+    font-weight: 500;
+    color: #ffffff;
+    margin: 40px 0;
+    transition: .2s linear;
+}
+ 
+.price sup, .price span {
+    font-size: 22px;
+    font-weight: 700;
+}
+ 
+.pricing-card li {
+    font-size: 16px;
+    padding: 10px 0;
+    
+}
+ 
+.pricing-card:hover , .pricing-card:hover .price {
+    color: #fff;
+}
+ 
+ 
+ 
+.order-btn {
+    display: inline-block;
+    margin-bottom: 40px;
+    margin-top: 80px;
+    border: 2px solid #636369;
+    color: #ffffff;
+    padding: 18px 40px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: .3s linear;
+}
+ 
+.order-btn:hover {
+    background-color: #7b7c7c;
+    color: #fff;
+}
+
+
+ /* Responsive command for pricing cards */ 
+
+@media screen and (max-width:1100px)
+{
+    .pricing-card{
+        flex: 50%;
+    }
+}
+
+.section2 {
+    width: 100%;
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#12151c
+}
+
+.section2-wrapper {
+    color: #fff;
+
+
+ 
+}
+
+.section2-wrapper h1 {
+    font-size: 3rem; 
+    
+}
+
+.section2-wrapper p {
+    margin-top: 10px;
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+  
+}
+
+
+.section3 {
+    width: 100%;
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:rgb(80, 75, 75); 
+
+}
+
+.section3-wrapper {
+    color: #fff;
+
+}
+
+.section3-wrapper h1 {
+    font-size: 3rem; 
+    color: #fff;
+  
+    
+}
+
+.section3-wrapper p {
+    margin-top: 10px;
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+}
+
+
+.section4 {
+    width: 100%;
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     background-color:#12151c
+}
+
+.section4-wrapper {
+    color: #fff;
+    margin-top: 50px;
+ 
+}
+
+.section4-wrapper h1 {
+    font-size: 3rem; 
+
+}
+
+.section4-wrapper p {
+    margin-top: 10px;
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+
+}
