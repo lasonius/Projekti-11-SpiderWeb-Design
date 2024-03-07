@@ -132,9 +132,75 @@
         transition-delay: calc(.15s * var(--i));
     }
 
-    .headtopic {
-        text-align: center;
+
+    .footer-wrapper {
+        display: flex;
+        align-items: center;
         justify-content: center;
+    }
+
+    .section-wrapper {
+        align-items: center;
+        position: relative;
+    }
+
+    @media (max-width: 768px) {
+        .headtopic {
+            margin: 0 auto; /* Lisää responsiivinen marginaali pienemmillä näytöillä */
+            font-size: 2rem; /* Säädä otsikon kokoa pienemmillä näytöillä */
+            top: 40%;
+            position: relative;
+            align-items: center;
+            text-align: center;
+        }
+         
+    
+        .footer {
+            flex-direction: column; /* Aseta footerin elementit pystysuuntaan pienemmillä näytöillä */
+            height: auto; /* Automaattinen korkeus footerille */
+           
+            align-items: center;
+            margin: 0;
+        }
+    
+        .footer h1,
+        .footer p {
+            text-align: center; /* Keskitä tekstit pienemmillä näytöillä */
+            margin: 10px 0; /* Säädä marginaaleja pienemmillä näytöillä */
+        }
+    
+        .form {
+            position: relative; /* Poista absoluuttinen sijainti */
+            align-items: center;
+            margin-right: 25px;
+            
+            
+        }
+    
+        .footer2 {
+            height: auto; /* Automaattinen korkeus footerille */
+            padding: 20px; /* Lisää sisätilaa footerille */
+        }
+    
+        .footer-wrapper h2,
+        .footer-wrapper p {
+            display: none; /* Piilota h2 ja p elementit pienemmillä näytöillä */
+        }
+        
+        .section2 {
+            width: 100%;
+        }
+        
+        .rightsclaim {
+            margin-top: 50px;
+            background-color: rgb(27, 25, 25);
+            width: 100%;
+        }
+
+        .logo2{
+            align-items: center;
+            position: relative;
+        }
 
     }
 }
@@ -146,12 +212,11 @@
 .headtopic {
     position: absolute;
     text-align: left;
-    margin-left: 250px;
+    margin-left: 20%; /* Poista kiinteä marginaali */
     top: 55%;
     color: rgb(255, 255, 255);
     font-size: 3rem;
-    text-shadow: 2cap;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* X-offset, Y-offset, blur-radius, color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     font-family: Titan One;
 } 
 
@@ -226,6 +291,10 @@ p{
     background-color: rgb(255, 255, 255);
     display: flex;
     
+}
+
+.footer-wrapper {
+    display:inline-block;
 }
 
 .footer h1 {
