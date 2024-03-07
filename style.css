@@ -133,9 +133,20 @@
     }
 
     .headtopic {
-        text-align: center;
-        justify-content: center;
+        top:55%;
+        right: 60px;
+    }
 
+    .form {
+        right:10px
+
+    }
+
+ 
+    .footer-wrapper{
+        display:none;
+   
+    
     }
 }
 
@@ -225,8 +236,12 @@ p{
     height: 400px;
     background-color: rgb(255, 255, 255);
     display: flex;
+    margin: 0; /* Poista ylimääräiset marginaalit */
+    padding: 0; /* Poista ylimääräiset täyttöarvot */
     
 }
+
+
 
 .footer h1 {
     margin-top: 20px;
