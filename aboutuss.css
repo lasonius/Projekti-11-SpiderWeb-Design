@@ -175,5 +175,51 @@ body{
     z-index: -1; /* Asetetaan päällekkäin muiden elementtien kanssa */
 }
 
+.information {
+    z-index: 2000;
+    color: white;
+    text-align: center;
+    align-items: center;
+    position: relative;
+    margin-top: 300px;
+}
+
+.information2 {
+    z-index: 2000;
+    color: white;
+    text-align: center;
+    align-items: center;
+    position: relative;
+    margin-top: 20px;
+}
+
+.information3 {
+    z-index: 2000;
+    color: white;
+    text-align: center;
+    align-items: center;
+    position: relative;
+    margin-top: 20px;
+}
+
+.information4 {
+    z-index: 2000;
+    color: white;
+    text-align: center;
+    align-items: center;
+    position: relative;
+    margin-top: 20px;
+}
+
+
+.information5 {
+    z-index: 2000;
+    color: white;
+    text-align: center;
+    align-items: center;
+    position: relative;
+    margin-top: 20px;
+}
+
 
 
