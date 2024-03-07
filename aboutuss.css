@@ -1,0 +1,225 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    background-image: url('Photo/landing.jpg'); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.3rem 10%;
+   /* background: black;*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black; 
+    z-index: -1;
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+
+.navbar a {
+    font-size: 1.15rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 2.5rem;
+    
+}
+
+.navbar a:hover {
+    color: rgb(112, 109, 109);
+}
+
+#check {
+    display: none;
+}
+
+.icons {
+    position: absolute;
+    right: 5%;
+    font-size: 2.8rem;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+/*Breakpoints for responsive*/ 
+@media (max-width: 992px) {
+    .header{
+        padding: 1.3rem 5%;
+    }
+}
+
+@media (max-width: 768px) {
+    .icons{
+        display: inline-flex;
+    }
+
+    #check:checked~.icons #menu-icon {
+        display: none;
+    }
+
+    .icons #close-icon {
+        display: none;
+    }
+
+    #check:checked~.icons #close-icon {
+        display:block ;
+    }
+
+    .navbar {
+        position:absolute ;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background-color: rgba(0, 0, 0, .5);
+        backdrop-filter: blur(10px);
+        box-shadow: 0. 5rem 1rem rgba(0, 0, 0, .5);
+        overflow: hidden;
+        transition: .3s ease;
+
+    }
+
+    #check:checked~.navbar {
+        height: 17.7rem;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 1.1rem;
+        margin: 1.5rem 0;
+        text-align: center;
+        transform: translateY(-50px);
+        opacity: 0;
+        transition: .3s ease;
+    }
+
+    #check:checked~.navbar a {
+        transform: translateY(0);
+        opacity: 1;
+        transition-delay: calc(.15s * var(--i));
+    }
+}
+
+
+
+
+
+.headtopic {
+    position: absolute;
+    text-align: left;
+    margin-left: 250px;
+    top: 55%;
+    color: rgb(255, 255, 255);
+    font-size: 3rem;
+    text-shadow: 2cap;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* X-offset, Y-offset, blur-radius, color */
+    font-family: Titan One;
+} 
+
+.fadein {
+    opacity: 0; /* Alussa teksti on nyt piilossa tämän avulla */ 
+    animation: fadein 3s ease forwards; /* Tämä käynnistää animaation, jotta teksti tulee siin*/
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0; /*Eli mistä arvosta animaatio alkaa*/
+    }
+    to {
+        opacity: 1; /* Mihin arvoon loppuu*/
+    }
+}
+
+
+
+.black-overlay {
+    background-color: black; /* Musta overlay */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5; /* Opacity-arvo, voit säätää tarpeesi mukaan */
+    z-index: -1; /* Asetetaan päällekkäin muiden elementtien kanssa */
+}
+
+.information {
+    z-index: 2000;
+    color: white;
+    text-align: center;
+    align-items: center;
+    position: relative;
+    margin-top: 300px;
+}
+
+.information2 {
+    z-index: 2000;
+    color: white;
+    text-align: center;
+    align-items: center;
+    position: relative;
+    margin-top: 20px;
+}
+
+.information3 {
+    z-index: 2000;
+    color: white;
+    text-align: center;
+    align-items: center;
+    position: relative;
+    margin-top: 20px;
+}
+
+.information4 {
+    z-index: 2000;
+    color: white;
+    text-align: center;
+    align-items: center;
+    position: relative;
+    margin-top: 20px;
+}
+
+
+.information5 {
+    z-index: 2000;
+    color: white;
+    text-align: center;
+    align-items: center;
+    position: relative;
+    margin-top: 20px;
+}
+
+
+
